@@ -13,7 +13,7 @@ export class SearchBar extends Component {
 
     handleChange = (event) => {
         let inputText = event.target.value.toLowerCase();
-        let filteredNames = importedNames.filter(name => {
+        const filteredNames = importedNames.filter(name => {
             return name.toLowerCase().includes(inputText);
         })
         this.setState({
