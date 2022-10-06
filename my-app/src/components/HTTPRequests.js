@@ -31,26 +31,26 @@ export class HTTPRequests extends Component {
     render() {
         const posts = this.state.posts;
         return (
-        <div>
-            <h1>Posts:</h1>
-            {
-                posts.length ? (
-                    posts.map(post => (
-                        <div key={post.id}>
-                            <h2>{post.id}. {post.title}</h2>
-                            <h4>By user ID {post.userId}</h4>
-                            <p>{post.body}</p>
-                            <hr />
-                        </div>
+            <div>
+                <h1>Posts:</h1>
+                {
+                    posts.length ? (
+                        posts.map(post => (
+                            <div key={post.id}>
+                                <h2>{post.id}. {post.title}</h2>
+                                <h4>By user ID {post.userId}</h4>
+                                <p>{post.body}</p>
+                                <hr />
+                            </div>
+                        )
                     )
-                )
-                ) : (
-                    this.state.error
-                    ? <p>{this.state.error}</p>
-                    : <h5>Loading posts...</h5>
-                )
-            }
-        </div>
+                    ) : (
+                        this.state.error
+                        ? <p>{this.state.error}</p>
+                        : <h5>Loading posts...</h5>
+                    )
+                }
+            </div>
         )
   }
 }
